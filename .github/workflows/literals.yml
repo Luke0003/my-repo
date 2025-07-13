@@ -7,9 +7,6 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - env:
-          HTML_URL: ${{ github.event.*.html_url }}
-      - run: echo "${HTML_URL}"
       - run: printenv | grep 'LITERAL_'
         env:
           LITERAL_NULL: ${{ null }}
